@@ -11,12 +11,6 @@
     font-family: cursive;
     font-size: 50px;
 }
-#clearBtn{
-    font-size: 25px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: cursive;
-}
 #submitBtn{
     font-size: 25px;
     border-radius: 15px;
@@ -24,6 +18,31 @@
     font-family: cursive;
 }
 #playerAnswer{
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 25px;
+    font-family: "consolas", monospace;
+}
+#gameContainer2{
+    border-radius: 50px;
+    background-color: grey;
+    border: 3px solid;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    line-height: 70px;
+}
+#questionText2{
+    font-family: cursive;
+    font-size: 50px;
+}
+#submitBtn2{
+    font-size: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: cursive;
+}
+#playerAnswer2{
     background-color: lightgrey;
     text-align: center;
     font-size: 25px;
