@@ -5,14 +5,23 @@ let answer = 4;
 let num1;
 let num2;
 let symbol;
+let playerChoice;
+
+window.addEventListener('keydown', (event) => {
+    if (event.keyCode == 13){
+        if (playerChoice){submit2()}
+        else {submit()};
+    };
+});
 
 submitBtn.addEventListener("click", submit);
 playerAnswer.addEventListener("click", clear);
 
 function submit(){
     if(playerAnswer.value == answer){
+        playerAnswer.value = "good job ;)"
         symbol = Math.floor(Math.random() * 4) + 1;
-        
+       
         switch(symbol){
             case(1):
                 num1 = Math.floor(Math.random() * 1001);
@@ -46,6 +55,7 @@ function submit(){
 
 function clear(){
     playerAnswer.value = "";
+    playerChoice = 0;
 };
 
 const questionText2 = document.querySelector("#questionText2");
@@ -60,6 +70,7 @@ playerAnswer2.addEventListener("click", clear2);
 
 function submit2(){
     if (answer2 == playerAnswer2.value){
+        playerAnswer2.value = "good job ;)"
         question[1] = symbols[Math.floor(Math.random() * 3)];
         question[3] = symbols[Math.floor(Math.random() * 3)];
 
@@ -109,10 +120,9 @@ function submit2(){
             };
         };
 
-        console.log(...question);
-
         answer2 = Math.round(answer2 * 100) / 100;
-        console.log(answer2)
+        console.log(`${question[0]} ${question[1]} ${question[2]} ${question[3]} ${question[4]} = ${answer2}`);
+
         questionText2.textContent = `${question[0]}${question[1]}${question[2]}${question[3]}${question[4]}=?`
     }
     else{
@@ -122,5 +132,5 @@ function submit2(){
 
 function clear2(){
     playerAnswer2.value = "";
+    playerChoice = 1;
 };
-
